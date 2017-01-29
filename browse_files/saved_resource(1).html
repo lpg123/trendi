@@ -1,0 +1,122 @@
+
+<!-- saved from url=(0011)about:blank -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/common/ui/effects.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/mainContainer.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/toolbar.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/outlines.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/outlinesMoveDialog.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/screenSelection.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/selectionMapper.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/rewordify.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/speech.css" rel="stylesheet" type="text/css"><link href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/contentScripts/helpers/byrei-dyndiv_0.5.css" rel="stylesheet" type="text/css"></head><body><div class="dji-sru-initial dji-sru-no-printable" dji-template-id="__dji_sru_main_container_content" id="__dji_sru_main_container_content">
+    <div id="dji-sru-drag-ghost"></div>
+    <div class="dji-sru-waiting"></div>
+    <div id="dji-sru-main-container-busy"></div>
+    <div class="dji-sru-clear-style">
+	    <div class="dji-sru-toolbar">
+			<div id="__dji_sru_speakButton" class="dji-sru-toolbar-button"></div>
+	        <div id="__dji_sru_screenshotButton" class="dji-sru-toolbar-button"></div>
+	        <div id="__dji_sru_rewordifyButton" class="dji-sru-toolbar-button"></div>
+	        <div id="__dji_sru_translateButton" class="dji-sru-toolbar-button"></div>
+	        <div id="__dji_sru_highlightButton" class="dji-sru-toolbar-button dji-sru-disabled"></div>
+	        <div class="dji-sru-outline-title-in-toolbar"></div>
+	        <div id="__dji_sru_showButton" class="dji-sru-toolbar-button"></div>
+	    </div>
+    </div>
+
+    <div class="dji-sru-pagination-container" dji-page-template="template-page">
+        <div class="dji-sru-pagination-container-viewport"><div dji-template-id="template-page" class="dji-sru-page dji-sru-page-current" style="left: 0px;"></div></div>
+        <div class="dji-sru-pagination-container-overlay"></div>
+    </div>
+
+    <div style="width: 0; height: 0; overflow: hidden; margin: 0; padding: 0;">&nbsp;</div><!-- Please don't remove - workaround for speaking empty outlines (with no topic). -->
+
+    <!-- Topic toolbar -->
+    <div id="dji-sru-topics-toolbar" class="invisible">
+        <svg id="__svg_topics_toolbar">
+            <svg style="width: 52px; height: 104px; border-bottom-color: #C29809;">
+                <g id="__dji_sru_linkButton" transform="scale(0.5, 0.5)">
+                    <g transform="translate(40, 24)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_linkButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/linkSource.svg"></image>
+                    </g> </g>
+                <g transform="scale(0.5, 0.5)">
+                    <g transform="translate(18, 66)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_indentButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/indent.svg"></image>
+                    </g> </g>
+                <g id="button3" transform="scale(0.5, 0.5)">
+                    <g transform="translate(18, 106)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_outdentButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/outdent.svg"></image>
+                    </g>
+                </g>
+                <g id="__dji_sru_deleteTopicButton" transform="scale(0.5, 0.5)">
+                    <g transform="translate(42, 144)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_deleteTopicButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/delete.svg"></image>
+                    </g>
+                </g>
+            </svg>
+        </svg>
+    </div>
+
+    <!--Source toolbar -->
+    <div id="dji-sru-sources-toolbar" class="invisible">
+        <svg id="__svg_sources_toolbar">
+            <svg style="width: 52px; height: 104px; border-bottom-color: #C29809;">
+                <g transform="scale(0.4, 0.4)">
+                    <g transform="translate(40, 65)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_editSourceButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/sourceEdit.svg"></image>
+                    </g>
+                </g>
+                <g transform="scale(0.5, 0.5)">
+                    <g transform="translate(28, 116)">
+                        <polygon points="0,0 40,0 40,40 0,40" style="fill:none"></polygon>
+                        <image id="__dji_sru_deleteSourceButton" x="5" y="5" width="30" height="30" xlink:href="chrome-extension://mloajfnmjckfjbeeofcdaecbelnblden/resources/images/delete.svg"></image>
+                    </g>
+                </g>
+
+            </svg>
+        </svg>
+    </div>
+
+
+
+<div dji-template-id="template-page-dji-sru-move-folder-dialog" class="dji-all-initial" id="dji-sru-move-folder-dialog">
+
+    <div class="dji-sru-dialog-title-bar">
+        <div id="__dji_sru_btnDialogCancel">Done</div>
+        <div class="dji-sru-dialog-title-center">Move to</div>
+    </div>
+    <div class="dji-sru-dialog-container">
+
+        <div class="dji-sru-dialog-content">
+            <div class="dji-sru-outline-dialog-element" id="dji-sru-0">
+                <div class="dji-sru-outline-dialog-element-header dji-sru-folder-selected">
+                    <div class="dji-sru-outline-dialog-element-header-content dji-home-folder">
+
+                        <div class="dji-sru-dialog-input-container"><input class="dji-sru-outline-dialog-title " readonly="" value="Home"></div>
+
+                    </div>
+                    <div class="dji-sru-dialog-btn-container">
+                        <div class="dji-sru-btnDialogNew"></div>
+                        <div class="dji-sru-btnDialogMove"></div>
+                    </div>
+                </div>
+                <div class="dji-sru-subfolders"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div><div dji-template-id="template-page-sources-popup" id="dji-sru-sources-popup">
+    <div class="dji-sru-dialog-title-bar">
+        <div id="__dji_sru_btnSourcesPopupCancel">Done</div>
+        <div class="dji-sru-dialog-title-center">Link to sources</div>
+    </div>
+    <div class="dji-sru-dialog-container">
+
+        <div class="dji-sru-dialog-content">
+
+
+        </div>
+        <div class="dji-sru-cite-button dji-sru-sources-popup">Cite new sources</div>
+
+    </div>
+</div></div></body></html>
